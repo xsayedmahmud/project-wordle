@@ -90,7 +90,8 @@ h1 {
   justify-content: center;
 }
 
-.guess {
+.guess,
+.row {
   display: flex;
   gap: 4px;
   margin-bottom: 4px;
@@ -105,6 +106,19 @@ h1 {
   border: 2px solid var(--color-gray-700);
   border-radius: var(--radius);
   font-size: 2rem;
+}
+
+.row {
+  justify-content: center;
+}
+.letter {
+  width: 2.5rem;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1/1;
+  background-color: var(--color-gray-900);
+  border-radius: 4px;
+  font-size: 1.5rem;
 }
 
 /*
@@ -124,17 +138,20 @@ h1 {
   --radius: 0px 0px 0px 4px;
 }
 
-.cell.correct {
+.cell.correct,
+.letter.correct {
   background: var(--color-success);
   border-color: var(--color-success);
   color: white;
 }
-.cell.incorrect {
+.cell.incorrect,
+.letter.incorrect {
   background: var(--color-gray-300);
   border-color: var(--color-gray-300);
   color: white;
 }
-.cell.misplaced {
+.cell.misplaced,
+.letter.misplaced {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
